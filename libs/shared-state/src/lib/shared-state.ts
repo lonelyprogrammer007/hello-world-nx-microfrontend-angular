@@ -1,3 +1,3 @@
 export const SharedState = {
-  name: '👀 SHARED STATE 👀',
+  name: '👀 SHARED STATE! 👀',
 };
