@@ -1,6 +1,6 @@
 module.exports = {
-  name: "cart",
+  name: 'cart',
   exposes: {
-    "./Module": "apps/cart/src/app/remote-entry/entry.module.ts",
+    './Module': 'apps/cart/src/app/remote-entry/entry.module.ts',
   },
 };

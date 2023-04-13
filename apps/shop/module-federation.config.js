@@ -1,6 +1,6 @@
 module.exports = {
-  name: "shop",
+  name: 'shop',
   exposes: {
-    "./Module": "apps/shop/src/app/remote-entry/entry.module.ts",
+    './Module': 'apps/shop/src/app/remote-entry/entry.module.ts',
   },
 };

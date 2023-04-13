@@ -1,6 +1,6 @@
 module.exports = {
-  name: "about",
+  name: 'about',
   exposes: {
-    "./Module": "apps/about/src/app/remote-entry/entry.module.ts",
+    './Module': 'apps/about/src/app/remote-entry/entry.module.ts',
   },
 };
