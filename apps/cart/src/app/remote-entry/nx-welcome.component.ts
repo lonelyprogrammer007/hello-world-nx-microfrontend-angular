@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { SharedStateService } from '@hello-world-nx/shared-state';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'hello-world-nx-nx-welcome',
@@ -414,6 +416,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
         }
       }
     </style>
+    <h2>SHARED STATE: {{ emojiText$ | async }}</h2>
+    <button (click)="changeAppState()">Change tate</button>
     <div class="wrapper">
       <div class="container">
         <!--  WELCOME  -->
@@ -850,4 +854,14 @@ nx affected:e2e</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {}
+export class NxWelcomeComponent {
+  emojiText$: Observable<string>;
+
+  constructor(private sharedStateService: SharedStateService) {
+    this.emojiText$ = this.sharedStateService.emojiText;
+  }
+
+  changeAppState() {
+    this.sharedStateService.changeState('CART COMPONENT');
+  }
+}
