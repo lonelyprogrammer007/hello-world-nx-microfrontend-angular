@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { SharedState } from '@hello-world-nx/shared-state';
 
 @Component({
   selector: 'hello-world-nx-nx-welcome',
@@ -424,10 +423,6 @@ import { SharedState } from '@hello-world-nx/shared-state';
             Welcome cart 👋
           </h1>
         </div>
-        <p>
-          Shared state: <strong>{{ name }}</strong>
-        </p>
-        <button (click)="modifyState()">change state content</button>
         <!--  HERO  -->
         <div id="hero" class="rounded">
           <div class="text-container">
@@ -855,12 +850,4 @@ nx affected:e2e</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {
-  name = SharedState.name;
-
-  modifyState() {
-    console.warn('click');
-    SharedState.name += '!';
-    this.name = SharedState.name;
-  }
-}
+export class NxWelcomeComponent {}
